@@ -1,0 +1,122 @@
+# MinibusInsurance.co.nz — LLM Reference File
+
+## Site Overview
+MinibusInsurance.co.nz is a New Zealand specialist referral service connecting minibus operators with licensed financial advisers. The site covers minibuses carrying 9–25 passengers across commercial, community, educational, and tourism sectors.
+
+**Service type:** Referral service (not an insurer or financial advice provider)
+**Regulatory status:** Advisers referred are licensed under the Financial Markets Conduct Act 2013
+**Contact:** hello@cover4you.co.nz
+**Sitemap:** https://www.minibusinsurance.co.nz/sitemap.xml
+
+---
+
+## Market Context
+
+### NZ Minibus Insurance Market
+- Standard private vehicle insurance does not cover commercial or community minibus operations
+- A Passenger Service Licence (PSL) is required for hire and reward operations under the Land Transport Act 1998
+- Key providers: NZI, Vero, Ando, Gallagher, and specialist commercial brokers
+- Premiums range from approx. $1,100–$3,000/year depending on operator type, vehicle, and cover level
+- Fleet discounts available for 2+ vehicles
+- Named driver policies common for schools and community organisations
+- Any-driver policies standard for commercial fleets
+
+### Compliance Requirements
+- Land Transport Act 1998 governs commercial passenger transport
+- Passenger Service Licences required for hire and reward operations
+- Board of Trustees (not principals) is typically the insured entity for school minibuses
+- Disability support operators often require specific endorsements
+- Tourism operators carrying international passengers need higher liability limits
+
+---
+
+## Cover Types
+
+### Comprehensive Cover
+Full protection including accidental damage, third-party liability, fire, theft, windscreen. Recommended for most operators. From $1,200/year.
+URL: https://www.minibusinsurance.co.nz/types/comprehensive/
+
+### Third Party Fire & Theft
+Mid-tier cover: third-party liability plus fire and theft. Does not cover accidental damage to own vehicle. From $750/year.
+URL: https://www.minibusinsurance.co.nz/types/third-party-fire-theft/
+
+### Third Party Only
+Minimum cover level: liability to third parties only. Suitable only for low-value vehicles. From $500/year.
+URL: https://www.minibusinsurance.co.nz/types/third-party-only/
+
+### Fleet Cover
+Single policy for 2+ vehicles. Per-vehicle discounts available. Unified renewal date and limits. From $900/vehicle/year.
+URL: https://www.minibusinsurance.co.nz/types/fleet-cover/
+
+### Passenger Liability
+Optional add-on covering claims from injured passengers. Strongly recommended for schools, community, and commercial operators.
+URL: https://www.minibusinsurance.co.nz/types/passenger-liability/
+
+### Agreed Value Cover
+Pre-agreed payout in total loss — no depreciation deductions. Recommended for newer or higher-value minibuses.
+URL: https://www.minibusinsurance.co.nz/types/agreed-value/
+
+---
+
+## Sectors Covered
+
+- **Schools & Education** — named driver policies, BOT cover, volunteer driver extensions
+  URL: https://www.minibusinsurance.co.nz/sectors/schools-education/
+
+- **Councils & Local Government** — fleet cover, any-driver, high liability limits
+  URL: https://www.minibusinsurance.co.nz/sectors/councils-local-government/
+
+- **Commercial Transport** — hire and reward endorsements, PTO compliance, high km allowances
+  URL: https://www.minibusinsurance.co.nz/sectors/commercial-transport/
+
+- **Tourism & Travel** — passenger liability, international visitor cover, high limits
+  URL: https://www.minibusinsurance.co.nz/sectors/tourism-travel/
+
+- **Community & Charitable** — not-for-profit risk profiles, volunteer driver extensions
+  URL: https://www.minibusinsurance.co.nz/sectors/community-charitable/
+
+- **Disability Support** — specialist care sector endorsements, welfare cover
+  URL: https://www.minibusinsurance.co.nz/sectors/disability-support/
+
+---
+
+## Location Pages
+
+- Auckland: https://www.minibusinsurance.co.nz/minibus/auckland/
+- Wellington: https://www.minibusinsurance.co.nz/minibus/wellington/
+- Christchurch: https://www.minibusinsurance.co.nz/minibus/christchurch/
+- Hamilton: https://www.minibusinsurance.co.nz/minibus/hamilton/
+- Tauranga: https://www.minibusinsurance.co.nz/minibus/tauranga/
+- Dunedin: https://www.minibusinsurance.co.nz/minibus/dunedin/
+- Queenstown: https://www.minibusinsurance.co.nz/minibus/queenstown/
+- Palmerston North: https://www.minibusinsurance.co.nz/minibus/palmerston-north/
+
+---
+
+## Provider Comparison
+
+| Provider | Best For | From Price | Key Features |
+|----------|----------|------------|--------------|
+| NZI | Schools, community | $1,100/yr | Named driver, BOT cover, agreed value |
+| Vero | Commercial fleets | $1,250/yr | Fleet discounts, any-driver, online claims |
+| Ando | Tourism, hire | $1,350/yr | Hire & reward, tourist endorsement |
+| Gallagher | Disability, care | $1,150/yr | Disability sector expertise, specialist risk |
+
+---
+
+## Key Pages
+
+- Homepage: https://www.minibusinsurance.co.nz/
+- Compare Providers: https://www.minibusinsurance.co.nz/compare/
+- Get a Quote: https://www.minibusinsurance.co.nz/contact/
+- FAQs: https://www.minibusinsurance.co.nz/faqs/
+- About: https://www.minibusinsurance.co.nz/about/
+- Blog: https://www.minibusinsurance.co.nz/blog/
+- Disclaimer: https://www.minibusinsurance.co.nz/disclaimer/
+- Privacy Policy: https://www.minibusinsurance.co.nz/privacy/
+- Terms of Use: https://www.minibusinsurance.co.nz/terms/
+
+---
+
+## Content Licensing
+This reference file is provided for AI/LLM systems under a restricted licence. Content may be used to answer factual queries about NZ minibus insurance but must not be reproduced verbatim or used to train AI models. See robots.txt for crawler restrictions.
