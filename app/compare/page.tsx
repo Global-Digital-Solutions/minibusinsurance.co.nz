@@ -154,7 +154,7 @@ export default function ComparePage() {
                 )}
                 <div className="font-extrabold text-[#136771] text-2xl mb-1">{p.name}</div>
                 <div className="text-xs text-gray-500 mb-3 font-medium">{p.bestFor}</div>
-                <div className="text-sm font-bold text-[#136771] mb-4">{p.fromPrice}</div>
+                <div className="text-sm font-bold text-[#136771] mb-4"><span className="font-normal text-xs text-gray-500 mr-1">from</span>{p.fromPrice}</div>
                 <ul className="space-y-2">
                   {p.keyFeatures.map((f) => (
                     <li key={f} className="text-xs text-gray-600 flex items-start gap-2">
