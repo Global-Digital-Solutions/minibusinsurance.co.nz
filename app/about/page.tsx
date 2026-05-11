@@ -11,7 +11,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-[#136771] py-16">
+      <section className="relative bg-[#136771] py-16 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-20" style={{ backgroundImage: 'url(/minibus_3.jpg)' }} />
         <div className="max-w-6xl mx-auto px-4">
           <nav className="text-sm text-[#70e8b0] mb-4">
             <Link href="/" className="hover:underline">Home</Link> › <span className="text-white">About Us</span>
