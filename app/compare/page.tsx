@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { SITE } from '@/data/site';
+import CompareForm from '@/app/components/CompareForm';
 
 export const metadata: Metadata = {
   title: 'Compare Minibus Insurance Providers | NZI, Vero, Ando | MinibusInsurance.co.nz',
@@ -243,47 +243,7 @@ export default function ComparePage() {
             <div className="bg-white rounded-2xl p-7 shadow-xl">
               <h3 className="text-xl font-bold text-[#136771] mb-1">Get Your Comparison</h3>
               <p className="text-gray-500 text-sm mb-5">Licensed advisers will respond within 24 hours.</p>
-              <form method="POST" action={SITE.workerUrl} className="space-y-4">
-                <input type="hidden" name="_cc" value={SITE.formCC} />
-                <input type="hidden" name="_subject" value={SITE.formSubject} />
-                <input type="hidden" name="_next" value={SITE.formNext} />
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1">Full Name *</label>
-                    <input type="text" name="name" required placeholder="Your name"
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771]" />
-                  </div>
-                  <div>
-                    <label className="block text-xs font-medium text-gray-700 mb-1">Phone</label>
-                    <input type="tel" name="phone" placeholder="021 xxx xxxx"
-                      className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771]" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1">Email *</label>
-                  <input type="email" name="email" required placeholder="your@email.com"
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771]" />
-                </div>
-                <div>
-                  <label className="block text-xs font-medium text-gray-700 mb-1">Operator Type *</label>
-                  <select name="operator_type" required
-                    className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771] bg-white">
-                    <option value="">Select type...</option>
-                    <option>School / Kura</option>
-                    <option>Council / Local Government</option>
-                    <option>Commercial Operator</option>
-                    <option>Tourism / Travel</option>
-                    <option>Community / Charitable</option>
-                    <option>Disability Support</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-                <button type="submit"
-                  className="w-full bg-[#70e8b0] text-[#136771] font-bold py-3.5 rounded-xl text-base hover:bg-[#5dd4a0] transition-colors">
-                  Get My Comparison →
-                </button>
-                <p className="text-xs text-gray-400 text-center">No obligation · Licensed advisers · Details kept private</p>
-              </form>
+              <CompareForm />
             </div>
           </div>
         </div>
