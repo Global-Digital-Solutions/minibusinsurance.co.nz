@@ -3,7 +3,7 @@ import { SITE } from '@/data/site';
 
 export default function QuoteForm({ compact = false }: { compact?: boolean }) {
   return (
-    <div className={`bg-white rounded-xl shadow-lg border-2 border-[#70e8b0] p-6 w-full ${compact ? 'max-w-sm' : 'max-w-md'}`}>
+    <div className={`bg-white rounded-xl shadow-lg border-2 border-[#70e8b0] p-6 w-full ${compact ? 'max-w-xs' : 'max-w-xs'}`}>
       <h3 className="text-lg font-bold text-gray-900 mb-1">Get Your Quotes</h3>
       <p className="text-sm text-gray-500 mb-4">Licensed brokers — no obligation.</p>
       <form method="POST" action={SITE.workerUrl}>
