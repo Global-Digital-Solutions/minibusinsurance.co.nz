@@ -50,6 +50,12 @@ export default function Footer() {
                 { href: '/minibus/tauranga/', label: 'Tauranga' },
                 { href: '/minibus/queenstown/', label: 'Queenstown' },
                 { href: '/minibus/dunedin/', label: 'Dunedin' },
+                { href: '/minibus/rotorua/', label: 'Rotorua' },
+                { href: '/minibus/nelson/', label: 'Nelson' },
+                { href: '/minibus/napier-hastings/', label: 'Napier & Hastings' },
+                { href: '/minibus/new-plymouth/', label: 'New Plymouth' },
+                { href: '/minibus/whangarei/', label: 'Whangārei' },
+                { href: '/minibus/invercargill/', label: 'Invercargill' },
               ].map((l) => <li key={l.href}><Link href={l.href} className="hover:text-white">{l.label}</Link></li>)}
             </ul>
           </div>
