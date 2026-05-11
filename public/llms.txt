@@ -112,6 +112,10 @@ URL: https://www.minibusinsurance.co.nz/types/agreed-value/
 - FAQs: https://www.minibusinsurance.co.nz/faqs/
 - About: https://www.minibusinsurance.co.nz/about/
 - Blog: https://www.minibusinsurance.co.nz/blog/
+- Waka Kotahi Licensing Guide: https://www.minibusinsurance.co.nz/blog/waka-kotahi-minibus-licence-requirements-nz/
+- Electric Minibus Insurance: https://www.minibusinsurance.co.nz/blog/electric-minibus-insurance-nz/
+- Community & NFP Minibus Insurance: https://www.minibusinsurance.co.nz/blog/community-minibus-insurance-nz/
+- Claims History Impact: https://www.minibusinsurance.co.nz/blog/minibus-insurance-claims-history-nz/
 - Disclaimer: https://www.minibusinsurance.co.nz/disclaimer/
 - Privacy Policy: https://www.minibusinsurance.co.nz/privacy/
 - Terms of Use: https://www.minibusinsurance.co.nz/terms/

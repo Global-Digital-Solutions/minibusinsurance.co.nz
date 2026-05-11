@@ -193,6 +193,170 @@ An independent commercial motor broker can access multiple insurers from a singl
 Minibus insurance is not "set and forget." Review your cover annually as your vehicle value, use patterns, driver pool, and fleet size change. What was the right policy three years ago may not be optimal today.`,
   },
   {
+    slug: 'waka-kotahi-minibus-licence-requirements-nz',
+    title: 'Waka Kotahi Licensing Requirements for NZ Minibus Operators',
+    excerpt: 'SPSL vs LPSL, P endorsements, Certificate of Fitness — understanding the Waka Kotahi licensing framework and how it connects to your insurance obligations.',
+    date: '2026-05-08',
+    readTime: '7 min read',
+    category: 'Compliance',
+    heroImage: 'https://images.pexels.com/photos/5699456/pexels-photo-5699456.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
+    content: `Operating a minibus commercially in New Zealand is not just an insurance question — it is a licensing question too. Waka Kotahi NZ Transport Agency governs who can operate passenger services, what vehicles can be used, and what qualifications drivers must hold. Getting the licensing framework right is the foundation of a valid insurance position.
+
+**Small vs Large Passenger Service Licence**
+
+The first decision is which licence category applies to your operation. A Small Passenger Service Licence (SPSL) covers vehicles designed to carry 12 or fewer people including the driver — that is, a maximum of 11 passengers. A Large Passenger Service Licence (LPSL) is required for vehicles carrying 13 or more people including the driver, meaning 12 or more passengers.
+
+This distinction matters enormously for insurance. A 12-seater minibus (11 passenger seats) sits under SPSL; a 13-seater (12 passenger seats) requires an LPSL. Misclassifying your service — or holding the wrong licence — can affect the validity of any insurance claim.
+
+**Driver P Endorsement Requirements**
+
+All drivers of vehicles in commercial passenger service must hold a current Passenger (P) endorsement on their licence. To obtain a P endorsement, drivers must hold a full New Zealand car licence (Class 1) for at least two years, pass a medical, undergo a Police background check confirming they are a fit and proper person, and complete the required knowledge test.
+
+For schools and community organisations using volunteer or casual drivers, this requirement is often overlooked. Anyone driving a minibus in a passenger service — regardless of whether they are paid — must hold a current P endorsement. Failure to enforce this can invalidate an insurance claim and expose the operating organisation to personal liability.
+
+**Certificate of Fitness Requirements**
+
+Commercial passenger service vehicles must hold a current Certificate of Fitness (CoF), which is more rigorous than the standard Warrant of Fitness (WoF) required for private vehicles. CoF inspections are required every six months for most passenger service vehicles and cover structural integrity, braking, lighting, and passenger safety equipment.
+
+Insurance policies for commercial minibuses typically require the vehicle to be legally roadworthy at the time of any incident. A lapsed CoF can give an insurer grounds to decline a claim, so tracking inspection dates is a critical part of fleet management.
+
+**Transport Service Licence Conditions**
+
+Holding a TSL imposes ongoing obligations on operators — including maintaining appropriate insurance. While Waka Kotahi does not prescribe a specific insurance product, operating without adequate third-party liability cover would likely be inconsistent with TSL conditions. Commercial motor policies from licensed insurers are the standard approach.
+
+**LPSL and the Certificate of Knowledge**
+
+LPSL applicants must pass a Certificate of Knowledge of Law and Practice examination — a formal assessment of transport law, operator obligations, and safety management. This is not required for SPSL operators. If you are expanding from a small minibus fleet into larger vehicles, this requirement must be factored into your planning timeline.
+
+**Practical Steps for Operators**
+
+Before arranging insurance, confirm which licence category your operation falls under. Check that all drivers hold current P endorsements and that vehicles have current CoF inspections. Ensure your TSL accurately reflects the services you operate — changes in vehicle size, route, or use type may require TSL amendments.
+
+When speaking with an insurance adviser, provide accurate information about your licence type, vehicle capacities, and driver qualifications. Misrepresenting these details — even unintentionally — can affect your cover validity.`,
+  },
+  {
+    slug: 'electric-minibus-insurance-nz',
+    title: 'Electric Minibus Insurance: What NZ Operators Need to Know',
+    excerpt: 'As electric and hybrid minibuses become more common in NZ fleets, the insurance landscape is evolving. Here is what operators transitioning to EVs need to understand.',
+    date: '2026-05-05',
+    readTime: '6 min read',
+    category: 'Fleet',
+    heroImage: 'https://images.pexels.com/photos/110844/pexels-photo-110844.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
+    content: `New Zealand's EV uptake has accelerated rapidly — by early 2026, approximately 90,000 battery electric vehicles (BEVs) were registered on NZ roads, with a further 44,000 plug-in hybrids. For commercial minibus operators, electric drivetrains are becoming an increasingly realistic option, particularly for school runs, community transport, and urban tourism routes. But EV insurance for commercial passenger vehicles works differently to standard petrol or diesel policies.
+
+**Why EV Insurance Costs More**
+
+Electric commercial vehicles typically attract higher insurance premiums than equivalent petrol or diesel models for several reasons. Battery packs are the most expensive component in an EV and are costly to repair or replace after accident damage. Specialist technicians are required to work on high-voltage systems safely, increasing repair costs and times. Parts availability for newer EV models is still more constrained than for established petrol platforms. As a result, commercial EV insurers price in higher repair cost exposure — particularly for total-loss and major collision claims.
+
+For context, private EV insurance in NZ already runs approximately 38% higher than equivalent petrol vehicles across retail policies. Commercial EV minibus premiums are at a similar or greater premium over diesel equivalents.
+
+**Battery Cover: What Policies Include and Exclude**
+
+Standard commercial motor policies may not explicitly address battery degradation, and it is important to clarify what your policy covers before a loss occurs. Most comprehensive policies will cover battery damage from an insured event — collision, fire, flood, or theft. However, gradual battery degradation over time is typically excluded as a maintenance issue. Some policies require that battery damage be directly caused by an insured event and not pre-existing.
+
+Ask your insurer or adviser specifically about battery replacement thresholds: at what point does battery damage constitute a total loss, and how is the insured value of the battery calculated?
+
+**Charging Infrastructure and On-Site Risks**
+
+For fleet operators with on-site charging infrastructure, standard commercial motor policies cover the vehicle but may not extend to the charging equipment or any fire damage originating from a charging fault. Separate property or public liability cover may be needed for charging infrastructure.
+
+EV charging fires, while statistically rare, are a known risk — particularly with overnight high-current charging. Some insurers are beginning to ask about charging arrangements as part of the underwriting process for EV fleets.
+
+**ACC Levy Changes for EVs**
+
+From 1 July 2025, electric vehicles no longer receive a discounted ACC levy and now pay the same rate as diesel vehicles. Combined with Road User Charges (RUCs) that have applied to light EVs since April 2024 at $76 per 1,000 km, the total cost of ownership calculation for fleet EVs has changed. These are not insurance costs, but they affect the overall economics operators are weighing when considering EV fleet transitions.
+
+**Getting the Right Cover for an EV Minibus**
+
+Not all commercial motor insurers have well-developed EV policy frameworks yet. When seeking cover for an electric or hybrid minibus, ask specifically about: agreed value or market value treatment of the battery; repair network — which approved repairers can work on your EV model; roadside assistance for EV-specific issues including charging emergencies; and any exclusions around battery condition or charging equipment.
+
+An independent broker with commercial fleet experience is best placed to identify which insurers have robust EV coverage and which are still offering adapted petrol-era policy wording that may have gaps for EV operations.`,
+  },
+  {
+    slug: 'community-minibus-insurance-nz',
+    title: 'Community Minibus Insurance: A Guide for NFPs, Charities, and Clubs',
+    excerpt: 'Charitable trusts, incorporated societies, and community groups have specific insurance needs when operating a minibus — and their legal structure matters more than many realise.',
+    date: '2026-05-01',
+    readTime: '6 min read',
+    category: 'Community',
+    heroImage: 'https://images.pexels.com/photos/5905499/pexels-photo-5905499.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
+    content: `Community organisations — churches, sports clubs, disability support groups, marae, cultural societies, and charitable trusts — are among the most common operators of minibuses in New Zealand. Many are also among the least well-insured, often running older vehicles under general policies that may not adequately cover their passenger-carrying activities.
+
+**Your Legal Structure Affects Your Liability**
+
+How your organisation is structured legally determines who carries liability if something goes wrong. An unincorporated group — a committee or club without formal legal status — means that individual committee members can be personally liable for claims arising from the organisation's activities, including vehicle accidents. Incorporated societies and charitable trust boards have a separate legal identity, which limits personal liability of members and trustees.
+
+All existing incorporated societies are required to re-register under the Incorporated Societies Act 2022, with the re-registration period running until April 2026. If your community organisation has not yet re-registered, this should be a priority — both for general governance reasons and because your legal status affects how insurance claims are handled.
+
+**Who Should Be the Named Insured?**
+
+For incorporated organisations, the policy should name the incorporated society or charitable trust board as the insured entity — not the chairperson, president, or a named individual. This is a common error in community organisation insurance and can cause serious problems at claim time if the individual listed is no longer in the role or the claim is against the organisation.
+
+For unincorporated groups, the situation is more complex. Some insurers will cover a named group, but personal liability exposure for organisers and committee members remains a concern. Seeking legal advice on incorporation is often worthwhile before arranging insurance for a community vehicle.
+
+**Volunteer Driver Extensions**
+
+Most community minibus operations rely on volunteer drivers — members, parents, or community helpers who are not employees of the organisation. Standard commercial motor policies may be structured around named, employed drivers. A volunteer driver extension broadens the policy to cover unlisted volunteers who meet basic criteria (current licence, P endorsement if required, no recent serious convictions).
+
+Check carefully whether your policy includes a volunteer driver extension, and if so, what the criteria are. A volunteer who drives without meeting the policy's driver criteria could result in a declined claim.
+
+**Not-For-Profit Insurance Specialists**
+
+Some insurers and brokers specialise in not-for-profit and community organisation cover. Gallagher Insurance NZ, for example, has specific expertise in NFP sector insurance including vehicle cover. Specialist providers understand the governance structures, volunteer arrangements, and activities typical of community organisations, and can structure cover that fits the reality of how these organisations operate.
+
+**Activities Coverage: What's In and What's Out**
+
+Standard community motor policies typically cover the transport of members to regular activities. But specific events — hui, tangi, sports tournaments, community festivals, overnight trips — may need to be specifically endorsed or notified to the insurer. If your minibus is used for a particularly large or unusual event, check with your insurer beforehand.
+
+**Keeping Premiums Manageable**
+
+Community organisations often operate on tight budgets. Ways to manage premiums include: restricting the driver pool to experienced, licensed drivers; maintaining a clean claims history; fitting the vehicle with a tracker; and reviewing the insured value annually — older vehicles should not be over-insured on an agreed-value basis. Fleet cover is available for organisations with multiple vehicles and can reduce the per-vehicle cost significantly.
+
+Working with a broker who understands the NFP sector means you're more likely to find cover that is both appropriate and affordable for your organisation's specific circumstances.`,
+  },
+  {
+    slug: 'minibus-insurance-claims-history-nz',
+    title: 'How Claims History Affects Your Minibus Insurance Premium',
+    excerpt: 'What at-fault claims, excess loadings, and driver history mean for your renewal premium — and what steps operators can take to manage the impact.',
+    date: '2026-04-28',
+    readTime: '5 min read',
+    category: 'Advice',
+    heroImage: 'https://images.pexels.com/photos/5699516/pexels-photo-5699516.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop',
+    content: `For minibus operators, insurance is a recurring cost — and one that can increase significantly after an at-fault claim or a series of incidents. Understanding how insurers treat claims history, and what steps you can take to manage its impact, is important for budget planning and long-term fleet management.
+
+**How NZ Insurers Assess Claims History**
+
+Commercial motor insurers in New Zealand typically review the last three to five years of claims history when quoting or renewing a policy. They look at the number of claims, their nature (at-fault vs not-at-fault), the total cost of claims paid, and whether any claims were declined. A clean claims history is one of the most powerful factors in maintaining competitive premiums over time.
+
+At-fault claims — where your driver caused or contributed to an accident — carry significantly more weight than not-at-fault claims. Multiple at-fault claims within a short period can trigger excess loadings (an additional excess applied per claim), reduced insurer appetite, or in some cases non-renewal of the policy.
+
+**Excess Loadings Explained**
+
+An excess loading is an additional excess amount applied to your policy — or to specific drivers — based on claims history. For example, a driver with two or more at-fault claims in the past two years may attract a $500–$1,000 additional excess on any future claim they are involved in. This is on top of the standard policy excess.
+
+For fleet operators, individual driver excess loadings can be a way to maintain fleet cover while managing the cost impact of higher-risk drivers. However, if excess loadings accumulate across multiple drivers, the effective cost of making small claims can exceed the excess itself — leading many operators to manage minor incidents outside of insurance.
+
+**Not-at-Fault Claims and Your Premium**
+
+While not-at-fault claims should not affect your no-claims bonus directly, insurers can and do consider the frequency of not-at-fault claims when assessing risk. An operator who regularly presents claims — even not-at-fault ones — may be seen as operating in a higher-risk environment. The practical advice is: keep records of all incidents accurately, distinguish clearly between at-fault and not-at-fault, and ensure not-at-fault claims are fully documented with third-party driver details.
+
+**Fleet Claims Experience**
+
+For fleet policies, insurers look at the overall claims experience of the fleet rather than individual vehicles. A fleet with a strong claims record will attract better renewal terms than one with frequent claims across multiple vehicles. Proactive fleet safety management — driver training, vehicle maintenance, clear incident reporting procedures — directly influences claims frequency and therefore renewal pricing.
+
+**Managing the Impact of a Claim**
+
+If you do make a claim, there are steps to minimise the long-term premium impact. Report the incident promptly and accurately. If the accident was not your fault, gather full third-party details and provide them to your insurer — this strengthens the subrogation (recovery) process and may preserve your claims record. If the repair cost is marginal relative to your excess, consider whether to claim at all.
+
+At renewal, if your premium increases significantly after a claim, use the renewal as an opportunity to get comparative quotes. Insurers assess risk differently, and the loading applied by your current insurer may not be replicated elsewhere.
+
+**Driver Training as a Premium Management Tool**
+
+Some commercial motor insurers offer premium discounts or reduced excess loadings for operators who can demonstrate formal driver training programmes. For organisations managing a pool of drivers — particularly schools and community groups using volunteers — implementing a formal driver sign-on process and periodic refresher training has both safety and insurance benefits.
+
+Discuss driver training provisions with your broker. The cost of a structured training programme is often recovered through improved premium terms within one or two renewal cycles.`,
+  },
+  {
     slug: 'tourism-operator-minibus-insurance',
     title: 'Tourism Operator Minibus Insurance: What You Need to Know',
     excerpt: 'Insurance for tourism minibuses — covering international passengers, adventure operations, and tour operator liability.',
