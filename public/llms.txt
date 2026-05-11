@@ -124,20 +124,22 @@ URL: https://www.minibusinsurance.co.nz/types/agreed-value/
 - About: https://www.minibusinsurance.co.nz/about/
 - Blog: https://www.minibusinsurance.co.nz/blog/
 
-## Blog Articles (12 total)
+## Blog Articles (12 total, expanded 2026-05-11 to 1,400–1,625 words each)
 
-- Complete Guide to Minibus Insurance: https://www.minibusinsurance.co.nz/blog/complete-guide-minibus-insurance-nz/
-- School Minibus Insurance Guide: https://www.minibusinsurance.co.nz/blog/school-minibus-insurance-nz/
-- Commercial vs Private Insurance: https://www.minibusinsurance.co.nz/blog/commercial-vs-private-minibus-insurance/
-- Minibus Insurance Costs NZ: https://www.minibusinsurance.co.nz/blog/minibus-insurance-costs-nz/
-- Fleet Insurance Guide: https://www.minibusinsurance.co.nz/blog/fleet-insurance-minibuses-nz/
-- Passenger Liability Insurance: https://www.minibusinsurance.co.nz/blog/passenger-liability-insurance-nz/
-- Comparing Providers: https://www.minibusinsurance.co.nz/blog/comparing-minibus-insurance-providers-nz/
-- Tourism Operator Insurance: https://www.minibusinsurance.co.nz/blog/tourism-operator-minibus-insurance/
-- Waka Kotahi Licensing Requirements: https://www.minibusinsurance.co.nz/blog/waka-kotahi-minibus-licence-requirements-nz/
-- Electric Minibus Insurance: https://www.minibusinsurance.co.nz/blog/electric-minibus-insurance-nz/
-- Community & NFP Minibus Insurance: https://www.minibusinsurance.co.nz/blog/community-minibus-insurance-nz/
-- Claims History & Premiums: https://www.minibusinsurance.co.nz/blog/minibus-insurance-claims-history-nz/
+Each article contains NZ-specific operator guidance, Waka Kotahi licensing context, ACC framework detail, and commercial motor market information.
+
+- Complete Guide to Minibus Insurance (1,540 words): https://www.minibusinsurance.co.nz/blog/complete-guide-minibus-insurance-nz/
+- School Minibus Insurance — Board of Trustees, volunteer drivers, CoF (1,528 words): https://www.minibusinsurance.co.nz/blog/school-minibus-insurance-nz/
+- Commercial vs Private Insurance — why private policies void (1,423 words): https://www.minibusinsurance.co.nz/blog/commercial-vs-private-minibus-insurance/
+- Minibus Insurance Costs NZ — 2026 premium ranges and cost factors (1,434 words): https://www.minibusinsurance.co.nz/blog/minibus-insurance-costs-nz/
+- Fleet Insurance Guide — named vs any-driver, fleet discounts, compliance tracking (1,412 words): https://www.minibusinsurance.co.nz/blog/fleet-insurance-minibuses-nz/
+- Passenger Liability Insurance — ACC gaps, boarding/alighting risks (1,434 words): https://www.minibusinsurance.co.nz/blog/passenger-liability-insurance-nz/
+- Comparing Providers — NZI, Vero, Ando, Gallagher compared (1,549 words): https://www.minibusinsurance.co.nz/blog/comparing-minibus-insurance-providers-nz/
+- Tourism Operator Insurance — hire & reward, international passengers, unsealed roads (1,625 words): https://www.minibusinsurance.co.nz/blog/tourism-operator-minibus-insurance/
+- Waka Kotahi Licensing — SPSL vs LPSL, P endorsements, CoF requirements (1,591 words): https://www.minibusinsurance.co.nz/blog/waka-kotahi-minibus-licence-requirements-nz/
+- Electric Minibus Insurance — battery cover, EV costs, RUC & ACC levy changes (1,470 words): https://www.minibusinsurance.co.nz/blog/electric-minibus-insurance-nz/
+- Community & NFP Minibus Insurance — legal structure, volunteer cover, governance (1,517 words): https://www.minibusinsurance.co.nz/blog/community-minibus-insurance-nz/
+- Claims History & Premium Impact — excess loadings, at-fault claims, driver training (1,553 words): https://www.minibusinsurance.co.nz/blog/minibus-insurance-claims-history-nz/
 
 ---
 
