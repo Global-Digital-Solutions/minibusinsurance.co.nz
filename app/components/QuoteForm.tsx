@@ -1,15 +1,34 @@
 'use client';
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import { SITE } from '@/data/site';
 
 export default function QuoteForm({ compact = false }: { compact?: boolean }) {
+  const router = useRouter();
+  const [submitting, setSubmitting] = useState(false);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setSubmitting(true);
+    const form = e.currentTarget;
+    const data = Object.fromEntries(new FormData(form));
+    try {
+      await fetch(SITE.workerUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, _subject: SITE.formSubject, _cc: SITE.formCC }),
+      });
+    } catch {
+      // fire-and-forget — proceed to thank-you regardless
+    }
+    router.push('/thank-you/');
+  }
+
   return (
     <div className={`bg-white rounded-xl shadow-lg border-2 border-[#70e8b0] p-6 w-full ${compact ? 'max-w-xs' : 'max-w-sm'}`}>
       <h3 className="text-lg font-bold text-gray-900 mb-0.5">Get Your Quotes</h3>
       <p className="text-xs text-gray-500 mb-4">Tell us about your operation — takes about two minutes.</p>
-      <form method="POST" action={SITE.workerUrl}>
-        <input type="hidden" name="_cc" value={SITE.formCC} />
-        <input type="hidden" name="_subject" value={SITE.formSubject} />
-        <input type="hidden" name="_next" value={SITE.formNext} />
+      <form onSubmit={handleSubmit}>
         <div className="space-y-3">
 
           {/* Contact details */}
@@ -114,9 +133,9 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
             </select>
           </div>
 
-          <button type="submit"
-            className="w-full text-gray-900 font-bold py-3 px-4 rounded-xl text-sm bg-[#70e8b0] hover:bg-[#5ed4a0] transition-colors">
-            Request My Quotes →
+          <button type="submit" disabled={submitting}
+            className="w-full text-gray-900 font-bold py-3 px-4 rounded-xl text-sm bg-[#70e8b0] hover:bg-[#5ed4a0] transition-colors disabled:opacity-60">
+            {submitting ? 'Sending…' : 'Request My Quotes →'}
           </button>
         </div>
         <p className="text-xs text-gray-400 mt-3 text-center">Licensed NZ brokers · No obligation</p>
