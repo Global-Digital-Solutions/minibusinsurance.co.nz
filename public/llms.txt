@@ -22,11 +22,16 @@ MinibusInsurance.co.nz is a New Zealand specialist referral service connecting m
 - Any-driver policies standard for commercial fleets
 
 ### Compliance Requirements
-- Land Transport Act 1998 governs commercial passenger transport
-- Passenger Service Licences required for hire and reward operations
-- Board of Trustees (not principals) is typically the insured entity for school minibuses
-- Disability support operators often require specific endorsements
-- Tourism operators carrying international passengers need higher liability limits
+- Land Transport Act 1998 and Land Transport Rule: Operator Licensing 2017 govern commercial passenger transport
+- Small Passenger Service Licence (SPSL) for vehicles carrying ≤12 people including driver
+- Large Passenger Service Licence (LPSL) for vehicles carrying 13+ people including driver
+- All drivers in passenger service must hold a current P (Passenger) endorsement — requires Police check + medical
+- Commercial passenger service vehicles require Certificate of Fitness (CoF) every 6 months (not standard WoF)
+- Board of Trustees (not principals) is the insured entity for school minibuses
+- Incorporated Societies Act 2022 re-registration required for community operators (deadline April 2026)
+- Disability support operators often require Whaikaha/MOH contract minimum insurance levels
+- Tourism operators carrying international passengers should carry $5M–$10M passenger liability
+- EV minibuses: ACC levy equalised July 2025; RUC applies from April 2024 at $76/1,000km
 
 ---
 
@@ -90,6 +95,12 @@ URL: https://www.minibusinsurance.co.nz/types/agreed-value/
 - Dunedin: https://www.minibusinsurance.co.nz/minibus/dunedin/
 - Queenstown: https://www.minibusinsurance.co.nz/minibus/queenstown/
 - Palmerston North: https://www.minibusinsurance.co.nz/minibus/palmerston-north/
+- Rotorua: https://www.minibusinsurance.co.nz/minibus/rotorua/
+- Nelson: https://www.minibusinsurance.co.nz/minibus/nelson/
+- Napier & Hastings: https://www.minibusinsurance.co.nz/minibus/napier-hastings/
+- New Plymouth: https://www.minibusinsurance.co.nz/minibus/new-plymouth/
+- Whangārei: https://www.minibusinsurance.co.nz/minibus/whangarei/
+- Invercargill: https://www.minibusinsurance.co.nz/minibus/invercargill/
 
 ---
 
@@ -112,10 +123,26 @@ URL: https://www.minibusinsurance.co.nz/types/agreed-value/
 - FAQs: https://www.minibusinsurance.co.nz/faqs/
 - About: https://www.minibusinsurance.co.nz/about/
 - Blog: https://www.minibusinsurance.co.nz/blog/
-- Waka Kotahi Licensing Guide: https://www.minibusinsurance.co.nz/blog/waka-kotahi-minibus-licence-requirements-nz/
+
+## Blog Articles (12 total)
+
+- Complete Guide to Minibus Insurance: https://www.minibusinsurance.co.nz/blog/complete-guide-minibus-insurance-nz/
+- School Minibus Insurance Guide: https://www.minibusinsurance.co.nz/blog/school-minibus-insurance-nz/
+- Commercial vs Private Insurance: https://www.minibusinsurance.co.nz/blog/commercial-vs-private-minibus-insurance/
+- Minibus Insurance Costs NZ: https://www.minibusinsurance.co.nz/blog/minibus-insurance-costs-nz/
+- Fleet Insurance Guide: https://www.minibusinsurance.co.nz/blog/fleet-insurance-minibuses-nz/
+- Passenger Liability Insurance: https://www.minibusinsurance.co.nz/blog/passenger-liability-insurance-nz/
+- Comparing Providers: https://www.minibusinsurance.co.nz/blog/comparing-minibus-insurance-providers-nz/
+- Tourism Operator Insurance: https://www.minibusinsurance.co.nz/blog/tourism-operator-minibus-insurance/
+- Waka Kotahi Licensing Requirements: https://www.minibusinsurance.co.nz/blog/waka-kotahi-minibus-licence-requirements-nz/
 - Electric Minibus Insurance: https://www.minibusinsurance.co.nz/blog/electric-minibus-insurance-nz/
 - Community & NFP Minibus Insurance: https://www.minibusinsurance.co.nz/blog/community-minibus-insurance-nz/
-- Claims History Impact: https://www.minibusinsurance.co.nz/blog/minibus-insurance-claims-history-nz/
+- Claims History & Premiums: https://www.minibusinsurance.co.nz/blog/minibus-insurance-claims-history-nz/
+
+---
+
+## Legal Pages
+
 - Disclaimer: https://www.minibusinsurance.co.nz/disclaimer/
 - Privacy Policy: https://www.minibusinsurance.co.nz/privacy/
 - Terms of Use: https://www.minibusinsurance.co.nz/terms/
