@@ -69,19 +69,56 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats strip */}
-      <section className="border-b border-gray-100 py-5 bg-white">
+      {/* Trust badges */}
+      <section className="bg-white border-b border-gray-100 py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
             {[
-              { val: '50+', label: 'Insurance Products' },
-              { val: '6', label: 'Operator Sectors' },
-              { val: '24hr', label: 'Response Time' },
-              { val: '100%', label: 'No Broker Fees' },
-            ].map(s => (
-              <div key={s.val}>
-                <p className="text-2xl font-extrabold" style={{ color: '#136771' }}>{s.val}</p>
-                <p className="text-xs text-gray-500 mt-0.5">{s.label}</p>
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.955 11.955 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                  </svg>
+                ),
+                val: 'Licensed Advisers',
+                label: 'FMCA-licensed NZ brokers only',
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+                val: '24hr Response',
+                label: 'Reply within one business day',
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                  </svg>
+                ),
+                val: '6 Providers',
+                label: 'NZI, Vero, Ando, Gallagher & more',
+              },
+              {
+                icon: (
+                  <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 01-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
+                  </svg>
+                ),
+                val: 'No Broker Fees',
+                label: 'Free comparison service',
+              },
+            ].map(b => (
+              <div key={b.val} className="flex items-center gap-4 bg-gray-50 border border-gray-200 rounded-2xl px-5 py-4 hover:border-[#136771]/30 hover:bg-[#136771]/5 transition-all">
+                <div className="flex-shrink-0 w-12 h-12 rounded-xl flex items-center justify-center text-white" style={{ backgroundColor: '#136771' }}>
+                  {b.icon}
+                </div>
+                <div>
+                  <div className="font-bold text-gray-900 text-sm leading-tight">{b.val}</div>
+                  <div className="text-xs text-gray-500 mt-0.5 leading-tight">{b.label}</div>
+                </div>
               </div>
             ))}
           </div>
@@ -89,21 +126,96 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="py-14 bg-gray-50">
+      <section className="py-20 bg-gray-900 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-2xl font-bold text-gray-900 text-center mb-10">How Our Service Works</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="text-center mb-14">
+            <span className="inline-block text-xs font-bold uppercase tracking-widest mb-3 px-3 py-1 rounded-full border" style={{ color: '#70e8b0', borderColor: 'rgba(112,232,176,0.3)', backgroundColor: 'rgba(112,232,176,0.08)' }}>How It Works</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white">Three Steps to the Right Cover</h2>
+            <p className="text-gray-400 mt-3 max-w-xl mx-auto">Our advisers handle the hard work — you just tell us about your operation.</p>
+          </div>
+
+          <style>{`
+            @keyframes fadeUp {
+              from { opacity: 0; transform: translateY(32px); }
+              to   { opacity: 1; transform: translateY(0); }
+            }
+            .hiw-card {
+              opacity: 0;
+              animation: fadeUp 0.6s ease forwards;
+            }
+            .hiw-card:nth-child(1) { animation-delay: 0.1s; }
+            .hiw-card:nth-child(2) { animation-delay: 0.3s; }
+            .hiw-card:nth-child(3) { animation-delay: 0.5s; }
+          `}</style>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative">
+            {/* Connector line — desktop only */}
+            <div className="hidden md:block absolute top-14 left-1/4 right-1/4 h-0.5 z-0" style={{ background: 'linear-gradient(90deg, rgba(112,232,176,0.15) 0%, rgba(112,232,176,0.5) 50%, rgba(112,232,176,0.15) 100%)' }} />
+
             {[
-              { step: '1', title: 'Tell Us About Your Minibus', desc: 'Share your operator type, vehicle details, passenger capacity, and how you use it. Takes about 2 minutes.' },
-              { step: '2', title: 'We Match You with Brokers', desc: 'Licensed NZ brokers who specialise in your sector compare policies from leading commercial insurers.' },
-              { step: '3', title: 'Choose the Right Cover', desc: 'Review your quotes, ask questions, and select the policy that best protects your operation.' },
-            ].map(s => (
-              <div key={s.step} className="text-center">
-                <div className="w-12 h-12 rounded-full flex items-center justify-center text-gray-900 font-bold text-lg mx-auto mb-4" style={{ backgroundColor: '#70e8b0' }}>{s.step}</div>
-                <h3 className="font-bold text-gray-900 mb-2">{s.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{s.desc}</p>
+              {
+                step: '01',
+                title: 'Tell Us About Your Operation',
+                desc: 'Share your operator type, vehicle details, passenger capacity, and how you use your minibus. Takes about two minutes — no pressure, no jargon.',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                  </svg>
+                ),
+              },
+              {
+                step: '02',
+                title: 'We Match You to the Right Adviser',
+                desc: 'A licensed NZ adviser who specialises in your sector compares policies across NZI, Vero, Ando, Gallagher, and other commercial insurers on your behalf.',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                ),
+              },
+              {
+                step: '03',
+                title: 'Choose Your Cover & Get Protected',
+                desc: 'Review your quotes side by side, ask questions, and pick the policy that fits your operation — not the most expensive one, the most appropriate one.',
+                icon: (
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={1.8} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 010 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a3 3 0 010-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375z" />
+                  </svg>
+                ),
+              },
+            ].map((s, i) => (
+              <div key={s.step} className="hiw-card relative z-10 bg-gray-800 border border-gray-700 rounded-2xl p-8 hover:border-[#70e8b0]/50 hover:bg-gray-750 transition-all group">
+                {/* Step number top-right */}
+                <div className="absolute top-5 right-6 text-5xl font-black opacity-10 text-white select-none">{s.step}</div>
+
+                {/* Icon circle */}
+                <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6 text-gray-900 group-hover:scale-110 transition-transform" style={{ backgroundColor: '#70e8b0' }}>
+                  {s.icon}
+                </div>
+
+                {/* Step badge */}
+                <div className="text-xs font-bold uppercase tracking-widest mb-2" style={{ color: '#70e8b0' }}>Step {i + 1}</div>
+
+                <h3 className="text-lg font-bold text-white mb-3 leading-snug">{s.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{s.desc}</p>
+
+                {/* Arrow connector — shows between cards on desktop */}
+                {i < 2 && (
+                  <div className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 rounded-full items-center justify-center border border-gray-700 bg-gray-900">
+                    <svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                  </div>
+                )}
               </div>
             ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <Link href="/contact/" className="inline-block font-bold px-8 py-4 rounded-xl text-gray-900 text-base hover:opacity-90 transition-opacity" style={{ backgroundColor: '#70e8b0' }}>
+              Get Started — Free &amp; No Obligation →
+            </Link>
+            <p className="text-gray-500 text-xs mt-3">Response within 24 business hours · Licensed NZ advisers · No broker fees</p>
           </div>
         </div>
       </section>
