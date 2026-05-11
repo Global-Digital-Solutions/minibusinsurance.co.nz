@@ -75,9 +75,19 @@ export default function Footer() {
             </ul>
           </div>
         </div>
-        <div className="border-t border-gray-800 pt-6 text-xs text-gray-500 space-y-2">
-          <p>MinibusInsurance.co.nz is a referral service operated by Cover4You Group. We connect operators with licensed NZ insurance brokers. We are not an insurer or Financial Advice Provider (FAP). The brokers we refer to are licensed under the Financial Markets Conduct Act 2013.</p>
-          <p>© {new Date().getFullYear()} MinibusInsurance.co.nz · All rights reserved.</p>
+        <div className="border-t border-gray-800 pt-6 space-y-3">
+          <p className="text-xs text-gray-500 leading-relaxed">
+            <strong className="text-gray-400">Disclaimer:</strong> MinibusInsurance.co.nz is an information and referral service only. We connect minibus operators with licensed insurance brokers and advisers who are regulated under the Financial Markets Conduct Act 2013 (FMCA). MinibusInsurance.co.nz itself is not a registered financial adviser and does not provide financial advice. All insurance recommendations and quotations are provided by the referred licensed advisers, not by this website. The information on this site is of a general nature only and does not take into account your individual circumstances, objectives, financial situation, or needs. Before acting on any information, you should consider its appropriateness for your situation and seek advice from a licensed financial adviser. See our{' '}
+            <Link href="/disclaimer/" className="hover:text-white underline">full disclaimer</Link>.
+          </p>
+          <div className="flex flex-wrap items-center justify-between gap-4">
+            <p className="text-xs text-gray-500">© {new Date().getFullYear()} MinibusInsurance.co.nz · All rights reserved.</p>
+            <div className="flex flex-wrap gap-4 text-xs">
+              <Link href="/privacy/" className="text-gray-500 hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/terms/" className="text-gray-500 hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="/disclaimer/" className="text-gray-500 hover:text-white transition-colors">Disclaimer</Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
