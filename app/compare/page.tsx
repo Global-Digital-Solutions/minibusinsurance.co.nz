@@ -168,32 +168,53 @@ export default function ComparePage() {
 
           {/* Comparison table */}
           <div className="mb-14">
-            <h2 className="text-2xl font-bold text-[#136771] mb-6 text-center">Feature Comparison</h2>
-            <div className="overflow-x-auto rounded-2xl border border-gray-200 shadow-sm">
-              <table className="w-full text-sm">
+            <div className="text-center mb-8">
+              <h2 className="text-3xl font-bold text-[#136771] mb-2">Feature Comparison</h2>
+              <p className="text-gray-500 text-sm">See exactly what each provider includes — so you only pay for cover you actually need.</p>
+            </div>
+            <div className="overflow-x-auto rounded-2xl border-2 border-[#136771] shadow-xl">
+              <table className="w-full text-sm border-collapse">
                 <thead>
                   <tr className="bg-[#136771] text-white">
-                    <th className="text-left p-4 font-semibold">Feature</th>
-                    <th className="text-center p-4 font-semibold">NZI</th>
-                    <th className="text-center p-4 font-semibold bg-[#0e4f56]">Vero</th>
-                    <th className="text-center p-4 font-semibold">Ando</th>
-                    <th className="text-center p-4 font-semibold">Gallagher</th>
+                    <th className="text-left px-5 py-4 font-bold text-base border-r border-white/20 w-2/5">Feature</th>
+                    <th className="text-center px-4 py-4 font-bold border-r border-white/20">
+                      <div className="text-base">NZI</div>
+                      <div className="text-[#70e8b0] text-xs font-normal mt-0.5">Schools & Community</div>
+                    </th>
+                    <th className="text-center px-4 py-4 font-bold border-r border-white/20 bg-[#70e8b0]/20">
+                      <div className="text-base">Vero</div>
+                      <div className="text-[#70e8b0] text-xs font-normal mt-0.5">Commercial Fleets</div>
+                      <div className="mt-1"><span className="bg-[#70e8b0] text-[#136771] text-xs font-bold px-2 py-0.5 rounded-full">Most Flexible</span></div>
+                    </th>
+                    <th className="text-center px-4 py-4 font-bold border-r border-white/20">
+                      <div className="text-base">Ando</div>
+                      <div className="text-[#70e8b0] text-xs font-normal mt-0.5">Tourism & Hire</div>
+                    </th>
+                    <th className="text-center px-4 py-4 font-bold">
+                      <div className="text-base">Gallagher</div>
+                      <div className="text-[#70e8b0] text-xs font-normal mt-0.5">Disability & Care</div>
+                    </th>
                   </tr>
                 </thead>
                 <tbody>
                   {COMPARISON_TABLE.map((row, i) => (
-                    <tr key={row.feature} className={i % 2 === 0 ? 'bg-white' : 'bg-gray-50'}>
-                      <td className="p-3.5 font-medium text-gray-700">{row.feature}</td>
-                      <td className="p-3.5 text-center">{cellValue(row.nzi)}</td>
-                      <td className="p-3.5 text-center bg-[#136771]/5">{cellValue(row.vero)}</td>
-                      <td className="p-3.5 text-center">{cellValue(row.ando)}</td>
-                      <td className="p-3.5 text-center">{cellValue(row.gallagher)}</td>
+                    <tr key={row.feature} className={`border-t-2 border-gray-100 ${i % 2 === 0 ? 'bg-white' : 'bg-gray-50'} hover:bg-[#136771]/5 transition-colors`}>
+                      <td className="px-5 py-4 font-semibold text-gray-800 border-r-2 border-gray-200">{row.feature}</td>
+                      <td className="px-4 py-4 text-center border-r border-gray-200">{cellValue(row.nzi)}</td>
+                      <td className="px-4 py-4 text-center border-r border-gray-200 bg-[#136771]/5">{cellValue(row.vero)}</td>
+                      <td className="px-4 py-4 text-center border-r border-gray-200">{cellValue(row.ando)}</td>
+                      <td className="px-4 py-4 text-center">{cellValue(row.gallagher)}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-gray-400 mt-3 text-center">Features are indicative. Actual policy terms vary. Prices are estimates for a standard 12-seat minibus. An adviser will confirm accurate pricing for your specific operation.</p>
+            <div className="flex items-center justify-center gap-6 mt-4 text-xs text-gray-500">
+              <span className="flex items-center gap-1.5"><span className="text-[#70e8b0] font-bold text-base">✓</span> Included</span>
+              <span className="flex items-center gap-1.5"><span className="text-gray-400 font-bold">–</span> Not included</span>
+              <span className="flex items-center gap-1.5"><span className="text-gray-500 font-medium">Add-on</span> Available at extra cost</span>
+            </div>
+            <p className="text-xs text-gray-400 mt-2 text-center">Features are indicative. Actual policy terms vary. An adviser will confirm accurate pricing for your specific operation.</p>
           </div>
 
           {/* Bottom CTA */}
