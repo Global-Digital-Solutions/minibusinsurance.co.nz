@@ -28,11 +28,16 @@ export default function CoverageTypePage({ params }: { params: { slug: string } 
     ],
   };
 
+  const heroImages = ['/minibus_1.jpg', '/minibus_2.jpg', '/minibus_3.jpg'];
+  const allSlugs = COVERAGE_TYPES.map(c => c.slug);
+  const heroImage = heroImages[allSlugs.indexOf(ct.slug) % heroImages.length];
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-      <section className="bg-gray-900 py-14">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative bg-gray-900 py-14 overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center opacity-35" style={{ backgroundImage: `url(${heroImage})` }} />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="text-sm text-gray-400 mb-5">
             <Link href="/" className="hover:text-gray-200">Home</Link><span className="mx-2">/</span>
             <Link href="/types/" className="hover:text-gray-200">Cover Types</Link><span className="mx-2">/</span>
@@ -40,7 +45,6 @@ export default function CoverageTypePage({ params }: { params: { slug: string } 
           </nav>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
             <div>
-              <div className="text-4xl mb-3">{ct.icon}</div>
               <h1 className="text-4xl font-extrabold text-white mb-4">{ct.name}</h1>
               <p className="text-gray-300 text-lg mb-3">{ct.shortDesc}</p>
               <p className="text-xl font-bold" style={{ color: '#70e8b0' }}>{ct.fromPrice}</p>
@@ -76,7 +80,6 @@ export default function CoverageTypePage({ params }: { params: { slug: string } 
                     <Link key={other.slug} href={`/types/${other.slug}/`}
                       className="border border-gray-200 rounded-xl p-4 hover:border-[#70e8b0] hover:shadow-sm transition-all group">
                       <div className="flex items-center space-x-2 mb-1">
-                        <span className="text-lg">{other.icon}</span>
                         <h3 className="font-semibold text-gray-900 text-sm group-hover:text-[#136771]">{other.name}</h3>
                       </div>
                       <p className="text-gray-500 text-xs">{other.shortDesc}</p>
