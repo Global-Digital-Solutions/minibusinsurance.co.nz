@@ -1,30 +1,52 @@
 'use client';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { SITE } from '@/data/site';
+import Script from 'next/script';
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAADMnsakZUoyx534R';
 
 export default function CompareForm() {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
+    setError('');
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+    const cfToken = fd.get('cf-turnstile-response');
+    if (!cfToken) {
+      setError('Please complete the security check and try again.');
+      return;
+    }
+    const data: Record<string, string> = {};
+    fd.forEach((value, key) => {
+      if (typeof value === 'string') data[key] = value;
+    });
+
     setSubmitting(true);
-    const data = Object.fromEntries(new FormData(e.currentTarget));
     try {
-      await fetch(SITE.workerUrl, {
+      const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _subject: SITE.formSubject, _cc: SITE.formCC }),
+        body: JSON.stringify({
+          ...data,
+          _subject: 'Minibus Insurance Comparison Request — MinibusInsurance.co.nz',
+          cfTurnstileToken: cfToken,
+        }),
       });
+      if (!res.ok) throw new Error('Submission failed');
+      router.push('/thank-you/');
     } catch {
-      // fire-and-forget
+      setError('Something went wrong. Please try again.');
+      setSubmitting(false);
     }
-    router.push('/thank-you/');
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
+      <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
       <div className="grid grid-cols-2 gap-3">
         <div>
           <label className="block text-xs font-medium text-gray-700 mb-1">Full Name *</label>
@@ -56,6 +78,16 @@ export default function CompareForm() {
           <option>Other</option>
         </select>
       </div>
+
+      {error && (
+        <p className="text-red-600 text-xs bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
+      )}
+
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer strategy="afterInteractive" />
+      <div className="flex justify-center">
+        <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-size="invisible" />
+      </div>
+
       <button type="submit" disabled={submitting}
         className="w-full bg-[#70e8b0] text-[#136771] font-bold py-3.5 rounded-xl text-base hover:bg-[#5dd4a0] transition-colors disabled:opacity-60">
         {submitting ? 'Sending…' : 'Get My Comparison →'}

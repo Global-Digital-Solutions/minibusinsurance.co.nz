@@ -1,27 +1,47 @@
 'use client';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { SITE } from '@/data/site';
+import Script from 'next/script';
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAADMnsakZUoyx534R';
 
 export default function QuoteForm({ compact = false }: { compact?: boolean }) {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitting(true);
+    setError('');
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
+    const fd = new FormData(form);
+    const cfToken = fd.get('cf-turnstile-response');
+    if (!cfToken) {
+      setError('Please complete the security check and try again.');
+      return;
+    }
+    const data: Record<string, string> = {};
+    fd.forEach((value, key) => {
+      if (typeof value === 'string') data[key] = value;
+    });
+
+    setSubmitting(true);
     try {
-      await fetch(SITE.workerUrl, {
+      const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _subject: SITE.formSubject, _cc: SITE.formCC }),
+        body: JSON.stringify({
+          ...data,
+          _subject: 'Minibus Insurance Quote Request — MinibusInsurance.co.nz',
+          cfTurnstileToken: cfToken,
+        }),
       });
+      if (!res.ok) throw new Error('Submission failed');
+      router.push('/thank-you/');
     } catch {
-      // fire-and-forget — proceed to thank-you regardless
+      setError('Something went wrong. Please try again.');
+      setSubmitting(false);
     }
-    router.push('/thank-you/');
   }
 
   return (
@@ -29,9 +49,9 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
       <h3 className="text-lg font-bold text-gray-900 mb-0.5">Get Your Quotes</h3>
       <p className="text-xs text-gray-500 mb-4">Tell us about your operation — takes about two minutes.</p>
       <form onSubmit={handleSubmit}>
+        <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
         <div className="space-y-3">
 
-          {/* Contact details */}
           <div>
             <label htmlFor="qf-name" className="block text-xs font-medium text-gray-700 mb-1">Full Name *</label>
             <input type="text" id="qf-name" name="name" required placeholder="Your name"
@@ -48,12 +68,10 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
               className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#70e8b0]" />
           </div>
 
-          {/* Divider */}
           <div className="pt-1 pb-0.5">
             <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide">Your Minibus</p>
           </div>
 
-          {/* Operator type */}
           <div>
             <label htmlFor="qf-type" className="block text-xs font-medium text-gray-700 mb-1">Operator Type *</label>
             <select id="qf-type" name="operator_type" required
@@ -69,14 +87,12 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
             </select>
           </div>
 
-          {/* Vehicle make/model */}
           <div>
             <label htmlFor="qf-vehicle" className="block text-xs font-medium text-gray-700 mb-1">Vehicle Make &amp; Model</label>
             <input type="text" id="qf-vehicle" name="vehicle" placeholder="e.g. Toyota HiAce, Mercedes Sprinter"
               className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-[#70e8b0]" />
           </div>
 
-          {/* Year + Seats side by side */}
           <div className="grid grid-cols-2 gap-2">
             <div>
               <label htmlFor="qf-year" className="block text-xs font-medium text-gray-700 mb-1">Vehicle Year</label>
@@ -104,7 +120,6 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
             </div>
           </div>
 
-          {/* How they use it */}
           <div>
             <label htmlFor="qf-use" className="block text-xs font-medium text-gray-700 mb-1">How You Use It *</label>
             <select id="qf-use" name="minibus_use" required
@@ -119,7 +134,6 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
             </select>
           </div>
 
-          {/* Cover type */}
           <div>
             <label htmlFor="qf-cover" className="block text-xs font-medium text-gray-700 mb-1">Cover Type</label>
             <select id="qf-cover" name="cover_type"
@@ -131,6 +145,15 @@ export default function QuoteForm({ compact = false }: { compact?: boolean }) {
               <option value="Passenger Liability">Passenger Liability</option>
               <option value="Agreed Value">Agreed Value</option>
             </select>
+          </div>
+
+          {error && (
+            <p className="text-red-600 text-xs bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
+          )}
+
+          <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer strategy="afterInteractive" />
+          <div className="flex justify-center">
+            <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-size="invisible" />
           </div>
 
           <button type="submit" disabled={submitting}

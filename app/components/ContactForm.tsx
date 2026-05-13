@@ -1,34 +1,54 @@
 'use client';
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
-import { SITE } from '@/data/site';
+import Script from 'next/script';
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY ?? '0x4AAAAAADMnsakZUoyx534R';
 
 export default function ContactForm() {
   const router = useRouter();
   const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState('');
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitting(true);
+    setError('');
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form));
+    const fd = new FormData(form);
+    const cfToken = fd.get('cf-turnstile-response');
+    if (!cfToken) {
+      setError('Please complete the security check and try again.');
+      return;
+    }
+    const data: Record<string, string> = {};
+    fd.forEach((value, key) => {
+      if (typeof value === 'string') data[key] = value;
+    });
+
+    setSubmitting(true);
     try {
-      await fetch(SITE.workerUrl, {
+      const res = await fetch('/api/submit-form', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...data, _subject: SITE.formSubject, _cc: SITE.formCC }),
+        body: JSON.stringify({
+          ...data,
+          _subject: 'Minibus Insurance Enquiry — MinibusInsurance.co.nz',
+          cfTurnstileToken: cfToken,
+        }),
       });
+      if (!res.ok) throw new Error('Submission failed');
+      router.push('/thank-you/');
     } catch {
-      // fire-and-forget — proceed to thank-you regardless
+      setError('Something went wrong. Please try again.');
+      setSubmitting(false);
     }
-    router.push('/thank-you/');
   }
 
   return (
     <form onSubmit={handleSubmit}>
+      <input type="text" name="_honey" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
       <div className="space-y-4">
 
-        {/* Step 1: Contact details */}
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide pt-1">Your Details</p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -49,7 +69,6 @@ export default function ContactForm() {
             className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771]" />
         </div>
 
-        {/* Step 2: Operation details */}
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide pt-2">Your Operation</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -82,7 +101,6 @@ export default function ContactForm() {
           </div>
         </div>
 
-        {/* Step 3: Vehicle details */}
         <p className="text-xs font-semibold text-gray-400 uppercase tracking-wide pt-2">Your Vehicle</p>
 
         <div>
@@ -135,6 +153,15 @@ export default function ContactForm() {
           <textarea id="c-message" name="message" rows={3}
             className="w-full border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#136771] resize-none"
             placeholder="Number of vehicles in your fleet, current insurer, renewal date, or anything else relevant…" />
+        </div>
+
+        {error && (
+          <p className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-lg px-3 py-2">{error}</p>
+        )}
+
+        <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer strategy="afterInteractive" />
+        <div className="flex justify-center">
+          <div className="cf-turnstile" data-sitekey={TURNSTILE_SITE_KEY} data-size="invisible" />
         </div>
 
         <button type="submit" disabled={submitting}
